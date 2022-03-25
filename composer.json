@@ -8,6 +8,7 @@
         "php": "^8.0.2",
         "blade-ui-kit/blade-icons": "^1.2",
         "guzzlehttp/guzzle": "^7.2",
+        "khatabwedaa/blade-css-icons": "^1.1",
         "laravel/framework": "^9.2",
         "laravel/jetstream": "^2.6",
         "laravel/sanctum": "^2.14.1",
