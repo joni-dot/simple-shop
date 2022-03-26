@@ -18,6 +18,7 @@ class ProductFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
+            'price' => $this->faker->randomFloat(nbMaxDecimals: 2),
             'barcode' => $this->faker->isbn13(),
             'info' => $this->faker->text(),
         ];
