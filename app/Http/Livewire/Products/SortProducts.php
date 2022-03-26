@@ -10,22 +10,22 @@ class SortProducts extends Component
 
     public array $options = [
         'nameASC' => [
-            'option' => 'Name (A > Ö)',
+            'option' => 'Name (A > Z)',
             'sortBy' => 'name',
             'sort' => 'ASC',
         ],
         'nameDESC' => [
-            'option' => 'Name (Ö > A)',
+            'option' => 'Name (Z > A)',
             'sortBy' => 'name',
             'sort' => 'DESC',
         ],
         'barcodeASC' => [
-            'option' => 'Barcode (A > Ö)',
+            'option' => 'Barcode (A > Z)',
             'sortBy' => 'barcode',
             'sort' => 'ASC',
         ],
         'barcodeDESC' => [
-            'option' => 'Barcode (Ö > A)',
+            'option' => 'Barcode (Z > A)',
             'sortBy' => 'barcode',
             'sort' => 'DESC',
         ],
