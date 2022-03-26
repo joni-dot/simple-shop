@@ -6,13 +6,7 @@
                     @livewire('products.search-product')
                 </div>
                 <div class="p-4 sm:w-1/2 w-1/1">
-                    <div>
-                        <div class="relative inline-block w-full text-gray-700">
-                            <select class="w-full h-10 pl-3 pr-6 text-base placeholder-gray-600 border-gray-500 rounded-lg appearance-none focus:shadow-outline" placeholder="Regular input">
-                                <option>Sorting option</option>
-                            </select>
-                        </div>
-                    </div>
+                    @livewire('products.sort-products')
                 </div>
             </div>
         </div>
