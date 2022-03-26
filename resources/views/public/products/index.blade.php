@@ -3,12 +3,7 @@
         <div class="container px-5 pt-10 mx-auto">
             <div class="flex flex-wrap -m-4 text-center">
                 <div class="p-4 sm:w-1/2 w-1/1">
-                    <div class="relative text-gray-700">
-                        <input class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline" type="text" placeholder="Search" />
-                        <button class="absolute inset-y-0 right-0 flex items-center px-4 font-bold text-white bg-indigo-500 rounded-r-lg hover:bg-indigo-500 focus:bg-indigo-700">
-                            <x-icon-search class="h-4 w-4 text-white inline" />
-                        </button>
-                    </div>
+                    @livewire('products.search-product')
                 </div>
                 <div class="p-4 sm:w-1/2 w-1/1">
                     <div>
