@@ -8,6 +8,8 @@ class SortProducts extends Component
 {
     public string $selectedOption = '';
 
+    public ?string $search = null;
+
     public array $options = [
         'nameASC' => [
             'option' => 'Name (A > Z)',
@@ -34,6 +36,7 @@ class SortProducts extends Component
     public function mount()
     {
         $this->selectedOption = request('sortBy').request('sort');
+        $this->search = request('search');
     }
 
     public function render()
@@ -50,13 +53,17 @@ class SortProducts extends Component
      */
     public function sort()
     {
+        $search = $this->search
+            ? ['search' => $this->search]
+            : [];
+
         if (! array_key_exists(key: $this->selectedOption, array: $this->options)) {
-            return redirect()->route('public.products.index');
+            return redirect()->route('public.products.index', $search);
         }
 
-        return redirect()->route('public.products.index', [
+        return redirect()->route('public.products.index', array_merge([
             'sortBy' => $this->options[$this->selectedOption]['sortBy'],
             'sort' => $this->options[$this->selectedOption]['sort'],
-        ]);
+        ], $search));
     }
 }
