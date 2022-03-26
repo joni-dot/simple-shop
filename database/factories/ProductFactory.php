@@ -12,12 +12,14 @@ class ProductFactory extends Factory
     /**
      * Define the model's default state.
      *
-     * @return array<string, mixed>
+     * @return array
      */
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->name(),
+            'barcode' => $this->faker->isbn13(),
+            'info' => $this->faker->text(),
         ];
     }
 }
