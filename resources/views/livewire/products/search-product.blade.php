@@ -2,6 +2,7 @@
     <div class="relative text-gray-700">
         <input 
             wire:model.defer="inputSearch" 
+            wire:keydown.enter="search"
             class="w-full h-10 pl-3 pr-8 text-base placeholder-gray-600 border rounded-lg focus:shadow-outline" 
             type="text" 
         />
