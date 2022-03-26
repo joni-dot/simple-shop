@@ -33,4 +33,7 @@
             </div>
         </div>
     </section>
+    <div class="container px-5 py-10 mx-auto">
+        {{ $products->withQueryString()->links() }}
+    </div>
 </x-guest-layout>
