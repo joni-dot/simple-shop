@@ -25,6 +25,8 @@ class Product extends Model
 
     /**
      * Array of fields that are sreachable.
+     *
+     * @var array
      */
     protected $searchable = [
         'name',
