@@ -16,7 +16,9 @@ class ProductsController extends Controller
     public function index()
     {
         return view('public.products.index', [
-            'products' => Product::searchable()
+            'products' => Product::query()
+                ->searchable()
+                ->sortable()
                 ->paginate(),
         ]);
     }
