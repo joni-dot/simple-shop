@@ -18,9 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/dashboard', function () {
+        return redirect('/');
+    });
+    Route::get('/products/create', [ProductsController::class, 'create'])->name('public.products.create');
+});
+
 Route::get('/products', [ProductsController::class, 'index'])->name('public.products.index');
 Route::get('/products/{product}', [ProductsController::class, 'show'])->name('public.products.show');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return redirect('/');
-})->name('dashboard');

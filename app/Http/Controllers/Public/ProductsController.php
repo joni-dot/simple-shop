@@ -35,4 +35,17 @@ class ProductsController extends Controller
             'product' => $product,
         ]);
     }
+
+    /**
+     * Display the creation form.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('public.products.create', [
+            'product' => new Product(),
+        ]);
+    }
 }
