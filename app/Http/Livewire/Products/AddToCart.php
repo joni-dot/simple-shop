@@ -36,9 +36,9 @@ class AddToCart extends Component
     /**
      * Add product to the cart.
      *
-     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     * @return void
      */
-    public function addToCart()
+    public function addToCart(): void
     {
         if (! session()->exists("cart.products.{$this->product->id}")) {
             session(["cart.products.{$this->product->id}" => 1]);
