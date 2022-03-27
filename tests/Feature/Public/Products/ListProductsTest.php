@@ -5,12 +5,9 @@ namespace Tests\Feature\Public\Products;
 use App\Models\Product;
 use Illuminate\Testing\TestResponse;
 use Tests\TestCase;
-use Tests\Traits\CanSignIn;
 
 class ListProductsTest extends TestCase
 {
-    use CanSignIn;
-
     /**
      * Setup test.
      *
