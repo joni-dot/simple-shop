@@ -14,22 +14,31 @@
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-10 mx-auto">
             <div class="flex flex-wrap -m-4">
-                @foreach($products as $product)
-                <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
-                        <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
-                    </a>
-                    <div class="mt-4">
-                        <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">EXAMPLE CATEGORY</h3>
-                        <h2 class="text-gray-900 title-font text-lg font-medium">
-                            <a href="{{ route('public.products.show', $product->id) }}">{{ $product->name }}</a>
-                        </h2>
-                        <p class="mt-1">
-                            {{ $product->price }} €
-                        </p>
+                @forelse($products as $product)
+                    <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+                        <a class="block relative h-48 rounded overflow-hidden">
+                            <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
+                        </a>
+                        <div class="mt-4">
+                            <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">EXAMPLE CATEGORY</h3>
+                            <h2 class="text-gray-900 title-font text-lg font-medium">
+                                <a href="{{ route('public.products.show', $product->id) }}">{{ $product->name }}</a>
+                            </h2>
+                            <p class="mt-1">
+                                {{ $product->price }} €
+                            </p>
+                        </div>
                     </div>
-                </div>
-                @endforeach
+                @empty
+                    <section class="text-gray-600 body-font w-full">
+                        <div class="container mx-auto px-5 py-24 items-center justify-center">
+                            <div class="text-center w-full">
+                                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">No Products</h1>
+                                <p class="mb-8 leading-relaxed">Didn't find any products.</p>
+                            </div>
+                        </div>
+                    </section>
+                @endforelse
             </div>
         </div>
     </section>
