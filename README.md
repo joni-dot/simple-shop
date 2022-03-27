@@ -34,6 +34,12 @@ cp .env.testing.example .env.testing
 ./vendor/bin/sail up
 ```
 
+### Generate App Key
+
+```
+./vendor/bin/sail artisan key:generate
+```
+
 ### Seed Database With Test Data (Artisan Command)
 
 ```
