@@ -2,7 +2,6 @@
 
 namespace Tests\Feature\Public\Products;
 
-use App\Models\Product;
 use Illuminate\Testing\TestResponse;
 use Tests\TestCase;
 

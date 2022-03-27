@@ -4,7 +4,12 @@ namespace App\Models\Traits;
 
 trait HasStaticTableName
 {
-    public static function tableName()
+    /**
+     * Return db table name of model.
+     *
+     * @return  string
+     */
+    public static function tableName(): string
     {
         return with(new static)->getTable();
     }

@@ -6,7 +6,12 @@ use App\Models\User;
 
 trait CanSignIn
 {
-    public function signIn()
+    /**
+     * Sign in to the system.
+     *
+     * @return  void
+     */
+    public function signIn(): void
     {
         $this->actingAs(User::factory()->create());
     }
