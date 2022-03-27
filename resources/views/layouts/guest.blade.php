@@ -28,10 +28,21 @@
                 <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
                     <a href="{{ route('public.products.index') }}" class="mr-5 hover:text-gray-900">Products</a>
                 </nav>
-                <a href="/login" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-                    Login
-                    <x-icon-key class="h-6 w-6 text-gray-800" />    
-                </a>
+                @guest
+                    <a href="/login" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                        Login
+                        <x-icon-key class="h-6 w-6 text-gray-800" />    
+                    </a>
+                @endguest
+                @auth 
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button type="submit" class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
+                            Log Out
+                            <x-icon-key class="h-6 w-6 text-gray-800" />    
+                        </button>
+                    </form>
+                @endauth
             </div>
         </header>
         <div class="font-sans text-gray-900 antialiased bg-gray-100">
