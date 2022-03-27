@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Products;
 
 use Livewire\Component;
 
-class SearchProduct extends Component
+class SearchProducts extends Component
 {
     public string $inputSearch = '';
 
@@ -18,7 +18,7 @@ class SearchProduct extends Component
 
     public function render()
     {
-        return view('livewire.products.search-product');
+        return view('livewire.products.search-products');
     }
 
     /**

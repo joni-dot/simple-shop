@@ -3,7 +3,7 @@
         <div class="container px-5 pt-10 mx-auto">
             <div class="flex flex-wrap -m-4 text-center">
                 <div class="p-4 sm:w-1/2 w-1/1">
-                    @livewire('products.search-product')
+                    @livewire('products.search-products')
                 </div>
                 <div class="p-4 sm:w-1/2 w-1/1">
                     @livewire('products.sort-products')
