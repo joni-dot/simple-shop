@@ -6,10 +6,13 @@ use Livewire\Component;
 
 class SortProducts extends Component
 {
+    /** @var string */
     public string $selectedOption = '';
 
+    /** @var string|null */
     public ?string $search = null;
 
+    /** @var array */
     public array $options = [
         'nameASC' => [
             'option' => 'Name (A > Z)',
@@ -33,12 +36,22 @@ class SortProducts extends Component
         ],
     ];
 
+    /**
+     * Mount component.
+     *
+     * @return void
+     */
     public function mount()
     {
         $this->selectedOption = request('sortBy').request('sort');
         $this->search = request('search');
     }
 
+    /**
+     * Render component view.
+     *
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     */
     public function render()
     {
         return view('livewire.products.sort-products', [
