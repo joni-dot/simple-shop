@@ -1,3 +1,61 @@
+## How To Test Project 
+
+### Install Docker
+
+First make sure that docker has been installer and configure properly to your system. 
+
+[Docker Documentation](https://docs.docker.com/engine/install/)
+
+### Clone Project 
+
+```
+git clone git@github.com:joni-dot/simple-shop.git
+```
+
+### Install Composer Packages
+
+```
+composer install
+```
+
+### Copy Env - files
+
+```
+cp .env.example .env 
+```
+
+```
+cp .env.testing.example .env 
+```
+
+### Start Sail 
+
+```
+./vendor/bin/sail up
+```
+
+### Seed Database With Test Data 
+
+```
+./vendor/bin/sail artisan test:create-test-env
+```
+
+Now there should be some test products for testing and if your want to log in to the system, you can use credentials: 
+
+```
+Username: admin@example.com
+Password: password 
+``` 
+
+For example, you can add products to the system only if you are logged in. 
+
+### Navigate To WebShop
+
+You should be able to see WebShop when you navigate to address: 
+
+```
+localhost:8080/
+```
 
 ### Thank You
 
