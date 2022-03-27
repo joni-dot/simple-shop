@@ -22,11 +22,8 @@
                             Browse products
                         </h2>
                         <p class="leading-relaxed text-base">
-                            It's possible to browse, search and sort product in public view. More features are coming when we develop public site more.
-                        .</p>
-                        <a class="mt-3 text-indigo-500 inline-flex items-center">
-                            Learn More
-                        </a>
+                            It's possible to browse, search and sort products in public view. More features are coming when we develop public site more.
+                        </p>
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -40,9 +37,6 @@
                         <p class="leading-relaxed text-base">
                             Add new products to WebShop any time so you can expand your product catalog. In future we add more management features.
                         </p>
-                        <a class="mt-3 text-indigo-500 inline-flex items-center">
-                            Learn More
-                        </a>
                     </div>
                 </div>
                 <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
@@ -54,9 +48,6 @@
                         <p class="leading-relaxed text-base">
                             We are developing this WebShop all the time, so also new features are added regularly to make this WebShop even better! 
                         </p>
-                        <a class="mt-3 text-indigo-500 inline-flex items-center">
-                            Learn More
-                        </a>
                     </div>
                 </div>
             </div>
