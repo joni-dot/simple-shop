@@ -2,7 +2,7 @@
 
 ### Install Docker
 
-First make sure that docker has been installer and configure properly to your system. 
+First make sure that docker has been installed and configured properly to your system. 
 
 [Docker Documentation](https://docs.docker.com/engine/install/)
 
@@ -25,7 +25,7 @@ cp .env.example .env
 ```
 
 ```
-cp .env.testing.example .env 
+cp .env.testing.example .env.testing
 ```
 
 ### Start Sail 
@@ -34,7 +34,7 @@ cp .env.testing.example .env
 ./vendor/bin/sail up
 ```
 
-### Seed Database With Test Data 
+### Seed Database With Test Data (Artisan Command)
 
 ```
 ./vendor/bin/sail artisan test:create-test-env
@@ -55,6 +55,14 @@ You should be able to see WebShop when you navigate to address:
 
 ```
 localhost:8080/
+```
+
+#### Tips 
+
+##### Turn Off Sail After Testing 
+
+```
+./vendor/bin/sail down
 ```
 
 ### Thank You
