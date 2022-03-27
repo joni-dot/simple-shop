@@ -22,5 +22,5 @@ Route::get('/products', [ProductsController::class, 'index'])->name('public.prod
 Route::get('/products/{product}', [ProductsController::class, 'show'])->name('public.products.show');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    return redirect('/');
 })->name('dashboard');
