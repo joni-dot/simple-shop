@@ -6,9 +6,15 @@ use Livewire\Component;
 
 class SearchProducts extends Component
 {
+    /** @var string */
     public string $inputSearch = '';
 
-    public function mount()
+    /**
+     * Mount component.
+     *
+     * @return void
+     */
+    public function mount(): void
     {
         $this->inputSearch = request(
             key: 'search',
@@ -16,6 +22,11 @@ class SearchProducts extends Component
         );
     }
 
+    /**
+     * Render component view.
+     *
+     * @return \Illuminate\Contracts\View\View|\Illuminate\Contracts\View\Factory
+     */
     public function render()
     {
         return view('livewire.products.search-products');
