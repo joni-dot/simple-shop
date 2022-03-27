@@ -25,7 +25,7 @@
             <div class="flex flex-wrap -m-4">
                 @forelse($products as $product)
                 <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
-                    <a class="block relative h-48 rounded overflow-hidden">
+                    <a href="{{ route('public.products.show', $product->id) }}" class="block relative h-48 rounded overflow-hidden">
                         <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
                     </a>
                     <div class="mt-4">
